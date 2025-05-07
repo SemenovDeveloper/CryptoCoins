@@ -2,7 +2,6 @@ package com.semenovdev.cryptocoins.data.network
 
 import com.semenovdev.cryptocoins.data.network.model.CoinInfoJsonContainerDto
 import com.semenovdev.cryptocoins.data.network.model.CoinNamesListDto
-import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query
 
