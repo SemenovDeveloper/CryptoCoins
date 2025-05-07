@@ -1,5 +1,5 @@
 package com.semenovdev.cryptocoins.domain
 
-class GetCoinsListUseCase(private val coinsListRepository: CoinsListRepository) {
-    operator fun invoke() = coinsListRepository.getCoinsList()
+class GetCoinsListUseCase(private val coinRepository: CoinRepository) {
+    operator fun invoke() = coinRepository.getCoinsList()
 }

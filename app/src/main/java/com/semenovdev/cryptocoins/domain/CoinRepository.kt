@@ -2,7 +2,8 @@ package com.semenovdev.cryptocoins.domain
 
 import androidx.lifecycle.LiveData
 
-interface CoinsListRepository {
+interface CoinRepository {
    fun getCoinsList(): LiveData<List<CoinInfo>>
    fun getCoinInfo(fromSymbol: String): LiveData<CoinInfo>
+   suspend fun loadData()
 }

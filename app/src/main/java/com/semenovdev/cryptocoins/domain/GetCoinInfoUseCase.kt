@@ -1,5 +1,5 @@
 package com.semenovdev.cryptocoins.domain
 
-class GetCoinInfoUseCase(private val coinsListRepository: CoinsListRepository) {
-    operator fun invoke(fromSymbol: String) = coinsListRepository.getCoinInfo(fromSymbol)
+class GetCoinInfoUseCase(private val coinRepository: CoinRepository) {
+    operator fun invoke(fromSymbol: String) = coinRepository.getCoinInfo(fromSymbol)
 }
