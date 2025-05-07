@@ -1,4 +1,4 @@
-package com.semenovdev.cryptocoins.pojo
+package com.semenovdev.cryptocoins.data.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

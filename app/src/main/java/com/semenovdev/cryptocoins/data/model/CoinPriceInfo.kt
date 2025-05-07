@@ -1,4 +1,4 @@
-package com.semenovdev.cryptocoins.pojo
+package com.semenovdev.cryptocoins.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

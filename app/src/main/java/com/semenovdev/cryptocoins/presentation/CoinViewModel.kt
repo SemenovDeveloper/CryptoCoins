@@ -7,8 +7,8 @@ import androidx.lifecycle.LiveData
 import com.google.gson.Gson
 import com.semenovdev.cryptocoins.data.database.AppDatabase
 import com.semenovdev.cryptocoins.data.network.ApiFactory
-import com.semenovdev.cryptocoins.pojo.CoinPriceInfo
-import com.semenovdev.cryptocoins.pojo.CoinPriceInfoRawData
+import com.semenovdev.cryptocoins.data.model.CoinPriceInfo
+import com.semenovdev.cryptocoins.data.model.CoinPriceInfoRawData
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
@@ -29,6 +29,7 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     private fun loadData() {
+
         val disposable = ApiFactory.apiService.getTopCoinsInfo(limit = 50)
             .map { it.data?.map { it.coinInfo?.name }?.joinToString(",") }
             .flatMap { ApiFactory.apiService.getFullPriceList(fSyms = it) }

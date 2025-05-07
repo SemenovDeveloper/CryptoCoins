@@ -1,7 +1,7 @@
 package com.semenovdev.cryptocoins.data.network
 
-import com.semenovdev.cryptocoins.pojo.CoinInfoListOfData
-import com.semenovdev.cryptocoins.pojo.CoinPriceInfoRawData
+import com.semenovdev.cryptocoins.data.model.CoinInfoListOfData
+import com.semenovdev.cryptocoins.data.model.CoinPriceInfoRawData
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

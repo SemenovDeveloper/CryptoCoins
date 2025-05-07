@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
-import com.semenovdev.cryptocoins.pojo.CoinPriceInfo
+import com.semenovdev.cryptocoins.data.model.CoinPriceInfo
 import com.semenovdev.cryptocoins.R
 
 class CoinPriceListActivity : AppCompatActivity() {
