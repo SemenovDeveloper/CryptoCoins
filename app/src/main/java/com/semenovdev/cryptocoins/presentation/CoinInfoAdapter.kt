@@ -8,14 +8,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.semenovdev.cryptocoins.R
-import com.semenovdev.cryptocoins.data.model.CoinPriceInfo
+import com.semenovdev.cryptocoins.data.network.model.CoinInfoDto
 import com.squareup.picasso.Picasso
 import kotlin.text.format
 
 class CoinInfoAdapter(private val context: Context) :
     RecyclerView.Adapter<CoinInfoAdapter.CoinInfoViewHolder>() {
 
-    var coinInfoList: List<CoinPriceInfo> = listOf()
+    var coinInfoList: List<CoinInfoDto> = listOf()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -56,6 +56,6 @@ class CoinInfoAdapter(private val context: Context) :
     }
 
     interface OnCoinClickListener {
-        fun onCoinClick(coinPriceInfo: CoinPriceInfo)
+        fun onCoinClick(coinInfoDto: CoinInfoDto)
     }
 }

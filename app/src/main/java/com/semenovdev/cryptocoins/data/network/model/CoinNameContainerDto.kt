@@ -1,10 +1,10 @@
-package com.semenovdev.cryptocoins.data.model
+package com.semenovdev.cryptocoins.data.network.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
-data class Datum (
+data class CoinNameContainerDto (
     @SerializedName("CoinInfo")
     @Expose
-    val coinInfo: CoinInfo? = null
+    val coinNameDto: CoinNameDto? = null
 )
