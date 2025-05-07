@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.semenovdev.cryptocoins.R
-import com.semenovdev.cryptocoins.pojo.CoinPriceInfo
+import com.semenovdev.cryptocoins.data.model.CoinPriceInfo
 import com.squareup.picasso.Picasso
 import kotlin.text.format
 
