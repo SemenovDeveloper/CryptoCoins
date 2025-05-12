@@ -2,10 +2,8 @@ package com.semenovdev.cryptocoins.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
-import com.semenovdev.cryptocoins.data.network.model.CoinInfoDto
 import com.semenovdev.cryptocoins.R
 import com.semenovdev.cryptocoins.domain.CoinInfo
 
