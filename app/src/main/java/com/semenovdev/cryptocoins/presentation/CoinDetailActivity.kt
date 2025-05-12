@@ -5,7 +5,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.semenovdev.cryptocoins.R
 import com.semenovdev.cryptocoins.databinding.ActivityCoinDetailBinding
 import com.squareup.picasso.Picasso
 

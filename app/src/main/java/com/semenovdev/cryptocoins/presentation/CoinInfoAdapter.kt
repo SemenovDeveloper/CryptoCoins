@@ -3,6 +3,7 @@ package com.semenovdev.cryptocoins.presentation
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.semenovdev.cryptocoins.R
 import com.semenovdev.cryptocoins.databinding.ItemCoinInfoBinding
@@ -11,13 +12,7 @@ import com.squareup.picasso.Picasso
 import kotlin.text.format
 
 class CoinInfoAdapter(private val context: Context) :
-    RecyclerView.Adapter<CoinInfoViewHolder>() {
-
-    var coinInfoList: List<CoinInfo> = listOf()
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
+    ListAdapter<CoinInfo, CoinInfoViewHolder>(CoinInfoDiffCallback) {
 
     var onCoinClickListener: OnCoinClickListener? = null
 
@@ -30,10 +25,8 @@ class CoinInfoAdapter(private val context: Context) :
         return CoinInfoViewHolder(binding)
     }
 
-    override fun getItemCount() = coinInfoList.size
-
     override fun onBindViewHolder(holder: CoinInfoViewHolder, position: Int) {
-        val coin = coinInfoList[position]
+        val coin = getItem(position)
         with(holder.binding) {
             with(coin) {
                 val symbolsTemplate = context.resources.getString(R.string.symbols_template)

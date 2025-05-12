@@ -3,7 +3,6 @@ package com.semenovdev.cryptocoins.presentation
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import com.semenovdev.cryptocoins.R
 import com.semenovdev.cryptocoins.databinding.ActivityCoinPriceListBinding
 import com.semenovdev.cryptocoins.domain.CoinInfo
 
@@ -30,9 +29,10 @@ class CoinPriceListActivity : AppCompatActivity() {
         }
 
         binding.rvCoinPriceList.adapter = adapter
+        binding.rvCoinPriceList.itemAnimator = null
         viewModel = ViewModelProvider(this)[CoinViewModel::class.java]
         viewModel.priceList.observe(this) {
-            adapter.coinInfoList = it
+            adapter.submitList(it)
         }
     }
 }
