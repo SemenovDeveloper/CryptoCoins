@@ -2,12 +2,10 @@ package com.semenovdev.cryptocoins.presentation
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.viewModelScope
 import com.semenovdev.cryptocoins.data.repository.CoinRepositoryImpl
 import com.semenovdev.cryptocoins.domain.GetCoinInfoUseCase
 import com.semenovdev.cryptocoins.domain.GetCoinsListUseCase
 import com.semenovdev.cryptocoins.domain.LoadDataUseCase
-import kotlinx.coroutines.launch
 
 class CoinViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -23,8 +21,6 @@ class CoinViewModel(application: Application) : AndroidViewModel(application) {
 
 
     init {
-        viewModelScope.launch {
-            loadDataUseCase()
-        }
+        loadDataUseCase()
     }
 }
