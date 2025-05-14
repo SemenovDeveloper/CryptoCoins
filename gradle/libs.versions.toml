@@ -12,6 +12,8 @@ constraintlayout = "2.2.1"
 roomVersion = "2.7.1"
 lifeCycle = "2.8.7"
 workVersion = "2.10.1"
+retrofit = "2.9.0"
+picasso = "2.71828"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,9 +29,9 @@ androidx-room-compiler = { group = "androidx.room", name = "room-compiler", vers
 androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "roomVersion" }
 androidx-lifecycle = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifeCycle" }
 androidx-work = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "workVersion" }
-
+retrofit2-json = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+picasso = { group = "com.squareup.picasso", name = "picasso", version.ref = "picasso" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
